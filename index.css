@@ -1,0 +1,308 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: "Prosto One";
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  height: 165px;
+  padding: 0 61px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.header__logo {
+  height: 70px;
+  width: 70px;
+}
+
+.header__logo:hover {
+  cursor: pointer;
+}
+
+.contactBtn {
+  font-family: "Prosto One";
+  background: #932019;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.contactBtn__icon {
+  height: 22px;
+  width: 22px;
+  background-image: url(./img/phone.svg);
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.header__contactBtn {
+  margin-left: 158px;
+  width: 280px;
+  height: 61px;
+  font-size: 18px;
+  padding: 0 24px;
+}
+
+.header__contactBtn:hover {
+  cursor: pointer;
+}
+
+.menu__link {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #192d4a;
+  white-space: nowrap;
+}
+
+.menu__link-active {
+  color: #932019;
+  text-decoration: underline;
+  letter-spacing: 0.02em;
+}
+
+.apartment {
+  margin: 0 60px;
+}
+
+.apartment__linkBack {
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.02em;
+  color: #616161;
+}
+
+.apartment__linkBack::before {
+  content: url(./img/arrow-back.svg);
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.apartment__name {
+  font-size: 64px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #0f223e;
+  margin: 12px 0;
+}
+
+.apartment__subheading {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 24px;
+  color: #222222;
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+
+.apartment__address {
+  width: 350px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.info {
+  min-height: 167px;
+  margin: 0 60px 75px 60px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f3f7;
+  box-shadow: 0px 0px 34px rgba(34, 34, 34, 0.04),
+    0px 4px 14px rgba(148, 148, 148, 0.04);
+  border-radius: 4px;
+}
+
+.info__list {
+  display: flex;
+  align-items: center;
+  column-gap: 70px;
+}
+
+.info__plan {
+  height: 106px;
+  width: 106px;
+}
+
+.info__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info__subheading {
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: #222222;
+  opacity: 0.5;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.info__data {
+  font-size: 20px;
+  line-height: 25px;
+  white-space: nowrap;
+}
+
+.info__price::after {
+  content: url(./img/arrow-link.svg);
+  margin-left: 20px;
+}
+
+.info__contacts {
+  display: flex;
+  align-items: center;
+}
+
+.info__contactName {
+  width: 249px;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: right;
+  margin-right: 24px;
+}
+
+.info__contactBtn {
+  width: 267px;
+  justify-content: center;
+  height: 56px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1650px) {
+  .info__list {
+    column-gap: 60px;
+  }
+
+  .info__subheading {
+    font-size: 14px;
+  }
+
+  .info__data {
+    font-size: 18px;
+  }
+
+  .info__contactName {
+    font-size: 18px;
+  }
+
+  .info__contactBtn {
+    width: 247px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .info__list {
+    column-gap: 50px;
+  }
+
+  .info__subheading {
+    font-size: 12px;
+  }
+
+  .info__data {
+    font-size: 16px;
+  }
+
+  .info__contactName {
+    font-size: 16px;
+  }
+
+  .info__contactBtn {
+    width: 227px;
+  }
+}
+
+@media screen and (max-width: 1406px) {
+  .info__contacts {
+    flex-direction: column;
+  }
+  .info__contactName {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .header__contactBtn {
+    margin-left: 58px;
+  }
+
+  @media screen and (max-width: 1180px) {
+    .info {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px 60px;
+    }
+
+    .info__contacts {
+      margin-top: 20px;
+      flex-direction: row;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .header__contactBtn {
+      margin-left: 38px;
+      font-size: 14px;
+      justify-content: center;
+      width: 230px;
+    }
+
+    .menu__list {
+      column-gap: 25px;
+    }
+    .menu__link {
+      font-size: 14px;
+    }
+  }
+}

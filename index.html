@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Prosto+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Gefest Landing</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__logo" src="./img/logo.svg" alt="logo" />
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__link"><a href="/">О компании</a></li>
+          <li class="menu__link menu__link-active"><a href="/">Проекты</a></li>
+          <li class="menu__link"><a href="/">Контакты</a></li>
+        </ul>
+        <button class="header__contactBtn contactBtn">
+          <div class="contactBtn__icon"></div>
+          +7 (499) 999-99-99
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="apartment">
+        <a class="apartment__linkBack" href="/">Вернуться назад</a>
+        <h1 class="apartment__name">квартира 1</h1>
+        <div class="apartment__subheading">Aдрес:</div>
+        <div class="apartment__address">
+          ЮВАО, ул. Барыкина, д.5к2 тут будет вторая и третья строка адреса
+          объекта
+        </div>
+      </section>
+      <section class="info">
+        <ul class="info__list">
+          <li>
+            <img class="info__plan" src="./img/plan.svg" alt="apartment plan" />
+          </li>
+          <ul class="info__item">
+            <h2 class="info__subheading">Площадь</h2>
+            <li class="info__data">73.01 м<sup>2</sup></li>
+          </ul>
+          <ul class="info__item">
+            <h2 class="info__subheading">Этаж</h2>
+            <li class="info__data">1/1</li>
+          </ul>
+          <ul class="info__item">
+            <h2 class="info__subheading">Ставка м<sup>2</sup>/год</h2>
+            <li class="info__data">56 099 ₽</li>
+          </ul>
+          <ul class="info__item">
+            <h2 class="info__subheading">Стоимость</h2>
+            <li class="info__data info__price">120 000 ₽/мес</li>
+          </ul>
+        </ul>
+        <div class="info__contacts">
+          <div class="info__contactName">Филлипов Христафор Константинович</div>
+          <button class="info__contactBtn contactBtn">
+            <div class="contactBtn__icon"></div>
+            +7 (499) 111-22-33
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
