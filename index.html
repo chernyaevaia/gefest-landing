@@ -14,6 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="index.css" />
     <title>Gefest Landing</title>
   </head>
@@ -34,14 +39,53 @@
     </header>
     <main>
       <section class="apartment">
-        <a class="apartment__linkBack" href="/">Вернуться назад</a>
-        <h1 class="apartment__name">квартира 1</h1>
-        <div class="apartment__subheading">Aдрес:</div>
-        <div class="apartment__address">
-          ЮВАО, ул. Барыкина, д.5к2 тут будет вторая и третья строка адреса
-          объекта
+        <div class="">
+          <a class="apartment__linkBack" href="/">Вернуться назад</a>
+          <h1 class="apartment__name">квартира 1</h1>
+          <div class="apartment__subheading">Aдрес:</div>
+          <div class="apartment__address">
+            ЮВАО, ул. Барыкина, д.5к2 тут будет вторая и третья строка адреса
+            объекта
+          </div>
         </div>
+        <section class="slider">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/image-0.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/image-1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/image-2.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/image-3.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/image-4.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/image-5.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/image-6.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/image-7.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/image-8.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </section>
       </section>
+
       <section class="info">
         <ul class="info__list">
           <li>
@@ -73,5 +117,6 @@
         </div>
       </section>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
