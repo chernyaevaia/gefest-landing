@@ -389,9 +389,6 @@ a {
       margin-top: 50px;
     }
 
-    .info {
-      min-width: 680px;
-    }
   }
 
   @media screen and (max-width: 1000px) {
@@ -407,6 +404,68 @@ a {
     }
     .menu__link {
       font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 769px) {
+    .apartment__subheading {
+      display: none;
+    }
+    .apartment__address {
+      display: none;
+    }
+
+    .info {
+      padding: 34px 24px;
+      margin: 0 24px;
+    }
+    .info__plan {
+      display: none;
+    }
+
+    .info__subheading {
+      font-size: 16px;
+    }
+
+    .info__rate {
+      display: none;
+    }
+
+    .info__list {
+      width: 100%;
+      justify-content: space-around;
+      flex-direction: row-reverse;
+    }
+
+    .info__contacts {
+      justify-content: space-between;
+      width: 100%;
+    }
+    .info__contactName {
+      text-align: left;
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+
+    .info__price {
+      font-size: 24px;
+    }
+
+    .info__price::after {
+      display: none;
+    }
+    .subheading__price {
+      display: none;
+    }
+
+    .info__line {
+      width: 100%;
+      opacity: 0.3;
+      border: 1px solid #222222;
+      margin: 25px 0;
+    }
+
+    .info__contactBtn {
+      width: 280px;
     }
   }
 }
