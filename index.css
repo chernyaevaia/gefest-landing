@@ -42,7 +42,18 @@ a {
   justify-content: space-between;
 }
 
-.header__burgerMenu {
+.header__logo {
+  height: 70px;
+  width: 70px;
+}
+
+.header__logo:hover {
+  cursor: pointer;
+}
+
+.header__burgerMenu,
+.menu__line,
+.header__closeBurgerMenu {
   display: none;
 }
 
@@ -54,15 +65,6 @@ a {
 .menu__list {
   display: flex;
   column-gap: 40px;
-}
-
-.header__logo {
-  height: 70px;
-  width: 70px;
-}
-
-.header__logo:hover {
-  cursor: pointer;
 }
 
 .contactBtn {
@@ -102,10 +104,6 @@ a {
   letter-spacing: 0.02em;
   color: #192d4a;
   white-space: nowrap;
-}
-
-.menu__line {
-  display: none;
 }
 
 .menu__link-active {
@@ -289,10 +287,6 @@ a {
   font-size: 14px;
 }
 
-.header__closeBurgerMenu {
-  display: none;
-}
-
 @media screen and (max-width: 1650px) {
   .info__list {
     column-gap: 60px;
@@ -302,10 +296,7 @@ a {
     font-size: 14px;
   }
 
-  .info__data {
-    font-size: 18px;
-  }
-
+  .info__data,
   .info__contactName {
     font-size: 18px;
   }
@@ -324,10 +315,7 @@ a {
     font-size: 12px;
   }
 
-  .info__data {
-    font-size: 16px;
-  }
-
+  .info__data,
   .info__contactName {
     font-size: 16px;
   }
@@ -356,10 +344,7 @@ a {
       font-size: 50px;
     }
 
-    .apartment__subheading {
-      font-size: 20px;
-    }
-
+    .apartment__subheading,
     .apartment__address {
       font-size: 20px;
     }
@@ -383,10 +368,7 @@ a {
       width: 276px;
     }
 
-    .slider {
-      width: 642px;
-    }
-
+    .slider,
     .swiper {
       width: 642px;
     }
@@ -437,7 +419,17 @@ a {
       background-repeat: no-repeat;
     }
 
-    .header__burgerMenu.active {
+    .header__burgerMenu.active,
+    .menu__list,
+    .menu__contactBtn,
+    .apartment.active,
+    .info.active,
+    .apartment__subheading,
+    .apartment__address,
+    .info__plan,
+    .info__rate,
+    .info__price::after,
+    .subheading__price {
       display: none;
     }
 
@@ -451,11 +443,6 @@ a {
 
     .header__burgerMenu:hover {
       cursor: pointer;
-    }
-
-    .menu__list,
-    .menu__contactBtn {
-      display: none;
     }
 
     .header.active {
@@ -495,11 +482,6 @@ a {
       flex-direction: column;
     }
 
-    .apartment.active,
-    .info.active {
-      display: none;
-    }
-
     .menu__link.active {
       margin: 36px 0 12px 0;
     }
@@ -526,27 +508,14 @@ a {
     .apartment__linkBack {
       font-size: 16px;
     }
-    .apartment__subheading {
-      display: none;
-    }
-    .apartment__address {
-      display: none;
-    }
 
     .info {
       padding: 34px 24px;
       margin: 0 24px;
     }
-    .info__plan {
-      display: none;
-    }
 
     .info__subheading {
       font-size: 16px;
-    }
-
-    .info__rate {
-      display: none;
     }
 
     .info__list {
@@ -570,13 +539,6 @@ a {
       font-size: 24px;
     }
 
-    .info__price::after {
-      display: none;
-    }
-    .subheading__price {
-      display: none;
-    }
-
     .info__line2 {
       width: 100%;
       opacity: 0.3;
@@ -591,6 +553,7 @@ a {
       width: 100%;
     }
   }
+
   @media screen and (max-width: 680px) {
     .slider,
     .swiper {
@@ -636,17 +599,21 @@ a {
       font-size: 14px;
     }
 
-    .slider {
-      width: 329px;
-    }
+    .slider,
     .swiper {
       width: 329px;
     }
+
     .swiper-slide img {
       height: 146px;
     }
+
     .swiper-button-prev {
       --swiper-navigation-sides-offset: 50%;
+    }
+
+    .swiper-pagination-bullet {
+      --swiper-pagination-bullet-horizontal-gap: 6px;
     }
 
     .info {
@@ -690,9 +657,6 @@ a {
     .info__subheading,
     .info__data {
       font-size: 14px;
-    }
-    .swiper-pagination-bullet {
-      --swiper-pagination-bullet-horizontal-gap: 6px;
     }
   }
 }
