@@ -42,6 +42,10 @@ a {
   justify-content: space-between;
 }
 
+.header__burgerMenu {
+  display: none;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -98,6 +102,10 @@ a {
   letter-spacing: 0.02em;
   color: #192d4a;
   white-space: nowrap;
+}
+
+.menu__line {
+  display: none;
 }
 
 .menu__link-active {
@@ -388,7 +396,6 @@ a {
     .slider {
       margin-top: 50px;
     }
-
   }
 
   @media screen and (max-width: 1000px) {
@@ -406,7 +413,93 @@ a {
       font-size: 14px;
     }
   }
+
   @media screen and (max-width: 769px) {
+    .header {
+      height: 119px;
+      padding: 24px 20px;
+    }
+
+    .header__contactBtn {
+      margin-left: 0;
+      width: 280px;
+    }
+
+    .header__burgerMenu {
+      display: block;
+      height: 20px;
+      width: 34px;
+      background-image: url(./img/burger-menu.svg);
+      background-repeat: no-repeat;
+    }
+
+    .header__burgerMenu:hover {
+      cursor: pointer;
+    }
+
+    .menu__list,
+    .header__contactBtn {
+      display: none;
+    }
+
+    .header.active {
+      flex-wrap: wrap;
+      box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
+    }
+
+    .menu.active {
+      margin-top: 30px;
+      order: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      height: 100vh;
+      z-index: 100;
+      overflow: hidden;
+    }
+
+    .overlay.active {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      overflow: hidden;
+      transform: translate3d(0, 0, 0);
+      text-align: center;
+      opacity: 1;
+      z-index: 20;
+      background-color: white;
+    }
+
+    .menu__list.active {
+      width: 100%;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .apartment.active,
+    .info.active {
+      display: none;
+    }
+
+    .menu__link.active {
+      margin: 36px 0 12px 0;
+    }
+
+    .header__contactBtn.active {
+      display: flex;
+      margin-top: 36px;
+    }
+
+    .menu__line.active {
+      display: block;
+      width: 100%;
+      height: 1px;
+      border: 1px solid rgba(34, 34, 34, 0.2);
+    }
+
     .apartment__subheading {
       display: none;
     }
@@ -439,6 +532,7 @@ a {
     .info__contacts {
       justify-content: space-between;
       width: 100%;
+      margin-top: 0px;
     }
     .info__contactName {
       text-align: left;
