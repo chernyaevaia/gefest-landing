@@ -84,7 +84,7 @@ a {
   margin-right: 10px;
 }
 
-.header__contactBtn {
+.menu__contactBtn {
   margin-left: 158px;
   width: 280px;
   height: 61px;
@@ -92,7 +92,7 @@ a {
   padding: 0 24px;
 }
 
-.header__contactBtn:hover {
+.menu__contactBtn:hover {
   cursor: pointer;
 }
 
@@ -289,6 +289,10 @@ a {
   font-size: 14px;
 }
 
+.header__closeBurgerMenu {
+  display: none;
+}
+
 @media screen and (max-width: 1650px) {
   .info__list {
     column-gap: 60px;
@@ -343,7 +347,7 @@ a {
     margin-bottom: 10px;
   }
 
-  .header__contactBtn {
+  .menu__contactBtn {
     margin-left: 58px;
   }
 
@@ -399,7 +403,7 @@ a {
   }
 
   @media screen and (max-width: 1000px) {
-    .header__contactBtn {
+    .menu__contactBtn {
       margin-left: 38px;
       font-size: 14px;
       justify-content: center;
@@ -420,7 +424,7 @@ a {
       padding: 24px 20px;
     }
 
-    .header__contactBtn {
+    .menu__contactBtn {
       margin-left: 0;
       width: 280px;
     }
@@ -433,12 +437,24 @@ a {
       background-repeat: no-repeat;
     }
 
+    .header__burgerMenu.active {
+      display: none;
+    }
+
+    .header__closeBurgerMenu.active {
+      display: block;
+      height: 20px;
+      width: 34px;
+      background-image: url(./img/cross-burger.svg);
+      background-repeat: no-repeat;
+    }
+
     .header__burgerMenu:hover {
       cursor: pointer;
     }
 
     .menu__list,
-    .header__contactBtn {
+    .menu__contactBtn {
       display: none;
     }
 
@@ -488,7 +504,7 @@ a {
       margin: 36px 0 12px 0;
     }
 
-    .header__contactBtn.active {
+    .menu__contactBtn.active {
       display: flex;
       margin-top: 36px;
     }
@@ -500,6 +516,16 @@ a {
       border: 1px solid rgba(34, 34, 34, 0.2);
     }
 
+    .apartment {
+      margin: 80px 20px;
+    }
+    .apartment__name {
+      font-size: 34px;
+    }
+
+    .apartment__linkBack {
+      font-size: 16px;
+    }
     .apartment__subheading {
       display: none;
     }
@@ -551,7 +577,7 @@ a {
       display: none;
     }
 
-    .info__line {
+    .info__line2 {
       width: 100%;
       opacity: 0.3;
       border: 1px solid #222222;
@@ -560,6 +586,113 @@ a {
 
     .info__contactBtn {
       width: 280px;
+    }
+    .menu__contactBtn {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    .slider,
+    .swiper {
+      width: 500px;
+    }
+    .swiper-slide img {
+      height: 200px;
+    }
+    .swiper-button-prev {
+      --swiper-navigation-sides-offset: 65%;
+    }
+
+    .info__list {
+      column-gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .info__line1 {
+      width: 100%;
+      opacity: 0.3;
+      border: 1px solid #222222;
+      margin: 25px 0;
+    }
+    .header {
+      height: 72px;
+      padding: 0px 10px;
+    }
+
+    .header__logo {
+      width: 42px;
+    }
+
+    .apartment {
+      margin: 80px 14px;
+    }
+
+    .apartment__name {
+      font-size: 18px;
+    }
+
+    .apartment__linkBack {
+      font-size: 14px;
+    }
+
+    .slider {
+      width: 329px;
+    }
+    .swiper {
+      width: 329px;
+    }
+    .swiper-slide img {
+      height: 146px;
+    }
+    .swiper-button-prev {
+      --swiper-navigation-sides-offset: 50%;
+    }
+
+    .info {
+      margin: 0px;
+      padding: 24px 16px;
+    }
+
+    .info__contacts {
+      flex-direction: column;
+    }
+
+    .info__contactName {
+      width: 100%;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .info__contactBtn {
+      width: 100%;
+    }
+
+    .info__list {
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+    }
+
+    .info__rate {
+      display: flex;
+    }
+
+    .info__price {
+      font-size: 18px;
+    }
+
+    .info__price::after {
+      display: inline;
+      height: 11px;
+    }
+
+    .info__subheading,
+    .info__data {
+      font-size: 14px;
+    }
+    .swiper-pagination-bullet {
+      --swiper-pagination-bullet-horizontal-gap: 6px;
     }
   }
 }
